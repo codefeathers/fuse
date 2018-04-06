@@ -1,0 +1,26 @@
+{
+  "name": "select-return",
+  "version": "0.0.1",
+  "description": "Return a function based on a condition. Monadic alternative to switch-case.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codefeathers/select-return.git"
+  },
+  "keywords": [
+    "select",
+    "return",
+    "switch-case",
+    "functional",
+    "monad"
+  ],
+  "author": "Shreeviknesh Sankaran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codefeathers/select-return/issues"
+  },
+  "homepage": "https://github.com/codefeathers/select-return#readme"
+}
