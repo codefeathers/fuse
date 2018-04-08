@@ -29,7 +29,6 @@ module.exports = {
 		camelcase: 'warn',
 		'capitalized-comments': 'error',
 		'class-methods-use-this': 'error',
-		'comma-dangle': 'error',
 		'comma-spacing': 'error',
 		'comma-style': 'error',
 		complexity: 'error',
