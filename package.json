@@ -4,6 +4,8 @@
   "description": "Return a function based on a condition. Monadic alternative to switch-case.",
   "main": "Select.js",
   "scripts": {
+    "start": "node Select",
+    "debug": "node --inspect-brk testscript",
     "test": "npx jasmine"
   },
   "repository": {
