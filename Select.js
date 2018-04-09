@@ -5,9 +5,13 @@ class SelectValue {
 		this.value = value;
 		if (resolve) this.resolve = resolve;
 	}
+
+	resolve() {
+		return null;
+	}
 }
 
-SelectValue.prototype.resolve = () => null;
+// SelectValue.prototype.resolve = () => null;
 
 class SelectIterable {
 	constructor(values, tests) {
@@ -20,31 +24,25 @@ class SelectIterable {
 	}
 
 	for(test, consequent) {
-		const self = this;
 		return new SelectIterable(
-			self.values,
-			[ ...self.tests, { test, consequent } ]
+			this.values,
+			[ ...this.tests, { test, consequent } ]
 		);
 	}
-}
 
-/* eslint-disable-next-line func-names */
-SelectIterable.prototype.resolve = function (...args) {
-	const self = this;
-	return self.values.map(item => {
-		const resolve = self
-			.tests
-			/* eslint-disable-next-line */
-			.find(x => {
-				return x.test(item.value)
+	resolve(...args) {
+		return this.values.map(item => {
+			const resolver = this
+				.tests
+				.find(x => x.test(item.value)
 					? x.consequent
-					: null;
-			});
-		return resolve
-			? resolve.consequent(...args, self.value)
-			: () => null;
-	});
-};
+					: null);
+			return resolver
+				? resolver.consequent(...args, this.value)
+				: null;
+		});
+	}
+}
 
 class Select extends SelectValue {
 	constructor(value, resolve) {
