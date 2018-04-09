@@ -11,9 +11,9 @@ describe("Select", () => {
 		const result = new Select(a)
 			.for(x => x > 10, () => 'Greater than 10')
 			.for(x => x < 10, () => 'Lesser than 10')
-			.for(x => x === 10, () => `Is 10`);
+			.for(x => x === 10, () => 'Is 10');
 
-		expect(result.resolve()).toBe(`Is 10`);
+		expect(result.resolve()).toBe('Is 10');
 	});
 
 	it("Should return 'Less than 10'", () => {
@@ -36,5 +36,16 @@ describe("Select", () => {
 			.for(x => x === 10, () => `Is 10`);
 
 		expect(result.resolve()).toBe('Greater than 10');
+	});
+
+	it("Should return 'null'", () => {
+		const a = 'UnexpectedString';
+
+		const result = new Select(a)
+			.for(x => x > 10, () => 'Greater than 10')
+			.for(x => x < 10, () => 'Lesser than 10')
+			.for(x => x === 10, () => `Is 10`);
+
+		expect(result.resolve()).toBe(null);
 	});
 });
