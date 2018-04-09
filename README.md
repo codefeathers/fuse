@@ -38,6 +38,6 @@ The following npm scripts are available: `npm run lint`, `npm run debug`, `npm r
 
 ## Credits
 
-@Floofies was of huge help during development of this module.
+[@Floofies](https://github.com/Floofies) was of huge help during development of this module.
 
-Also, @TRGWII was a source of inspiration and guidance.
+Also, [@TRGWII](https://github.com/trgwii) was a source of inspiration and guidance.
