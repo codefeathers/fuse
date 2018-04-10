@@ -9,9 +9,9 @@ describe("Select", () => {
 		const a = 10;
 
 		const result = new Select(a)
-			.for(x => x > 10, () => 'Greater than 10')
-			.for(x => x < 10, () => 'Lesser than 10')
-			.for(x => x === 10, () => 'Is 10');
+			.if(x => x > 10, () => 'Greater than 10')
+			.if(x => x < 10, () => 'Lesser than 10')
+			.if(x => x === 10, () => 'Is 10');
 
 		expect(result.resolve()).toBe('Is 10');
 	});
@@ -20,9 +20,9 @@ describe("Select", () => {
 		const a = 1;
 
 		const result = new Select(a)
-			.for(x => x > 10, () => 'Greater than 10')
-			.for(x => x < 10, () => 'Lesser than 10')
-			.for(x => x === 10, () => `Is 10`);
+			.if(x => x > 10, () => 'Greater than 10')
+			.if(x => x < 10, () => 'Lesser than 10')
+			.if(x => x === 10, () => `Is 10`);
 
 		expect(result.resolve()).toBe('Lesser than 10');
 	});
@@ -31,9 +31,9 @@ describe("Select", () => {
 		const a = 100;
 
 		const result = new Select(a)
-			.for(x => x > 10, () => 'Greater than 10')
-			.for(x => x < 10, () => 'Lesser than 10')
-			.for(x => x === 10, () => `Is 10`);
+			.if(x => x > 10, () => 'Greater than 10')
+			.if(x => x < 10, () => 'Lesser than 10')
+			.if(x => x === 10, () => `Is 10`);
 
 		expect(result.resolve()).toBe('Greater than 10');
 	});
@@ -42,9 +42,9 @@ describe("Select", () => {
 		const a = 'UnexpectedString';
 
 		const result = new Select(a)
-			.for(x => x > 10, () => 'Greater than 10')
-			.for(x => x < 10, () => 'Lesser than 10')
-			.for(x => x === 10, () => `Is 10`);
+			.if(x => x > 10, () => 'Greater than 10')
+			.if(x => x < 10, () => 'Lesser than 10')
+			.if(x => x === 10, () => `Is 10`);
 
 		expect(result.resolve()).toBe(null);
 	});
