@@ -1,10 +1,13 @@
 {
   "name": "select-return",
-  "version": "0.0.1",
-  "description": "Return a function based on a condition. Monadic alternative to switch-case.",
+  "version": "0.0.9",
+  "description": "Return a function based on a condition. A functional alternative to switch-case.",
   "main": "Select.js",
   "scripts": {
-    "test": "npx jasmine"
+    "debug": "node --inspect-brk testscript",
+    "lint": "npx eslint .",
+    "test": "npx jasmine",
+    "docs": "npx jsdoc Select.js README.md --destination docs"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,9 @@
     "functional"
   ],
   "author": "Muthu Kumar (@MKRhere)",
+  "contributors": [
+    "Dani (@Floofies)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/codefeathers/select-return/issues"
@@ -24,6 +30,7 @@
   "homepage": "https://github.com/codefeathers/select-return#readme",
   "devDependencies": {
     "eslint": "^4.19.1",
-    "jasmine": "^3.1.0"
+    "jasmine": "^3.1.0",
+    "jsdoc": "^3.5.5"
   }
 }
