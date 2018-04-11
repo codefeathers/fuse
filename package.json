@@ -1,19 +1,21 @@
 {
-  "name": "select-return",
-  "version": "0.0.9",
+  "name": "@codefeathers/fuse",
+  "version": "0.10.0",
   "description": "Return a function based on a condition. A functional alternative to switch-case.",
-  "main": "Select.js",
+  "main": "index.js",
   "scripts": {
     "debug": "node --inspect-brk testscript",
     "lint": "npx eslint .",
     "test": "npx jasmine",
-    "docs": "npx jsdoc Select.js README.md --destination docs"
+    "docs": "npx jsdoc index.js README.md --destination docs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codefeathers/select-return.git"
+    "url": "git+https://github.com/codefeathers/Fuse.git"
   },
   "keywords": [
+    "fuse",
+    "function",
     "select",
     "return",
     "switch-case",
@@ -25,9 +27,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codefeathers/select-return/issues"
+    "url": "https://github.com/codefeathers/Fuse/issues"
   },
-  "homepage": "https://github.com/codefeathers/select-return#readme",
+  "homepage": "https://github.com/codefeathers/Fuse#readme",
   "devDependencies": {
     "eslint": "^4.19.1",
     "jasmine": "^3.1.0",
