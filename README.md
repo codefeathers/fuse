@@ -5,9 +5,10 @@
 
 ## Usage
 
+### Fuse
+
 ```JavaScript
 const Fuse = require('@codefeathers/fuse');
-const { FuseIterable } = require('@codefeathers/fuse');
 
 const a = 100;
 
@@ -19,11 +20,17 @@ const result = new Fuse(a)
 	.on(x => x===10,
 		a => `${a} is 10.`)
 
-console.log(result.resolve());
+console.log(result.resolve()); // -> "100 is greater than 10."
+```
 
-const arr = [ 0, 20, 30 ];
+### FuseIterable
 
-const temperature = new FuseIterable(arr)
+```JavaScript
+const { FuseIterable } = require('@codefeathers/fuse');
+
+const temperatures = [ 0, 20, 30 ];
+
+const result = new FuseIterable(temperatures)
 	.on(temp => temp<10,
 		() => `Too cold!`)
 	.on(temp => temp>=10 && temp <25,
@@ -31,7 +38,7 @@ const temperature = new FuseIterable(arr)
 	.on(temp => temp>=25,
 		() => `Too warm!`)
 
-console.log(temperature.resolve()); // -> [ "Too cold!", "Just right.", "Too warm!" ]
+console.log(result.resolve()); // -> [ "Too cold!", "Just right.", "Too warm!" ]
 ```
 
 ## Docs
