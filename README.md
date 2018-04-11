@@ -19,7 +19,19 @@ const result = new Fuse(a)
 	.on(x => x===10,
 		a => `${a} is 10.`)
 
-console.log(result.resolve()); // -> "100 is greater than 10."
+console.log(result.resolve());
+
+const arr = [ 0, 20, 30 ];
+
+const temperature = new FuseIterable(arr)
+	.on(temp => temp<10,
+		() => `Too cold!`)
+	.on(temp => temp>=10 && temp <25,
+		() => `Just right.`)
+	.on(temp => temp>=25,
+		() => `Too warm!`)
+
+console.log(temperature.resolve()); // -> [ "Too cold!", "Just right.", "Too warm!" ]
 ```
 
 ## Docs

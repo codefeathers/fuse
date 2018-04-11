@@ -1,7 +1,7 @@
 {
   "name": "@codefeathers/fuse",
-  "version": "0.10.0",
-  "description": "Return a function based on a condition. A functional alternative to switch-case.",
+  "version": "0.10.1",
+  "description": " FunctionSelect: Select a function that passes a condition. A functional alternative to switch-case.",
   "main": "index.js",
   "scripts": {
     "debug": "node --inspect-brk testscript",
