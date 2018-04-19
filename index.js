@@ -155,6 +155,16 @@ class Fuse extends FuseItem {
 	}
 
 	/**
+	 * Accepts a consequent function which automatically becomes resolve.
+	 * Does not return a Fuse instance as .on after .else would be useless.
+	 * @param {callback} consequent Consequent callback function
+	 * @returns {Fuse} Returns new FuseItem instance
+	 */
+	else(consequent) {
+		return new FuseItem(this.value, consequent);
+	}
+
+	/**
 	 * Accepts a value instead of a test function, and checks for strict
 	 * equality with this.value.
 	 * @param {any} value Any value to check against this.value
