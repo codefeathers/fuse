@@ -1,6 +1,6 @@
 {
   "name": "@codefeathers/fuse",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": " FunctionSelect: Select a function that passes a condition. A functional alternative to switch-case.",
   "main": "index.js",
   "scripts": {
