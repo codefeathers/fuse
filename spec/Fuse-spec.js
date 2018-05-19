@@ -94,4 +94,14 @@ describe("Fuse", () => {
 
 		expect(result.resolve()).toBe('default');
 	});
+
+	it(`Should return 'true'`, () => {
+		const a = 'ExpectedString';
+
+		const result = new Fuse(a)
+			.is('ExpectedString', () => true)
+			.else(() => 'default');
+
+		expect(result.resolve()).toBe(true);
+	});
 });

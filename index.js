@@ -161,6 +161,9 @@ class Fuse extends FuseItem {
 	 * @returns {Fuse} Returns new FuseItem instance
 	 */
 	else(consequent) {
+		/* If a resolve exists, just pass on the instance
+			until .resolve() is called */
+		if (this.resolved) return this;
 		return new FuseItem(this.value, consequent);
 	}
 
